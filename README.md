@@ -27,9 +27,7 @@ YES, you can scale using API Gateway in various ways. Such as enabling Cache cap
 # Testing Using curl_test.py
 
 The test script is run with:
-
 python curl_test.py <env>
 
 A name can also be specified if you desire:
-
 python curl_test.py <env> <name_for_post>
