@@ -36,6 +36,7 @@ def run_test(environment, name):
 	else:
 		sys.exit("POST test FAILED!")
 
+	#Only makes it this far if both GET and POST passed tests above
 	print "\n---------------\n   SUMMARY\n---------------"
 	print "Both GET and POST have passed for env: %s" % (environment)
 
@@ -44,17 +45,19 @@ if __name__ == "__main__":
 	if len(sys.argv)<2:
 		sys.exit("Usage:\nNOTE:<name_for_post> is optional\npython curl_test.py <env> <name_for_post>\n")
 	environment = sys.argv[1]
-	if environment != ("dev" or "test" or "demo" or "prod"):
+	#check to make sure env is valid before moving on
+	allowed_envs=["dev", "test", "demo", "prod"]
+	if environment not in allowed_envs:
 		sys.exit("Invalid environment! Select from dev, test, demo or prod")
+	#generate a fakeout name if not specified by user
 	if len(sys.argv)==2:
-		name="I am a name"
+		name="Fakeout Name"
 	elif len(sys.argv)==3:
 		name = sys.argv[2]
 	else:
 		sys.exit("Usage:\nNOTE:<name_for_post> is optional\npython curl_test.py <env> <name_for_post>\n")
 
-
-
+	#print something so user knows test is initiating and then run test against env
 	print "---------------\nBEGIN CURL TEST\n---------------\n"
 	run_test(environment, name)
 
