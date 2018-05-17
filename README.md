@@ -23,6 +23,9 @@ Can the service be scaled, preferably automatically, to handle increased loads?
 YES, you can scale using API Gateway in various ways. Such as enabling Cache capacity and increasing burst and ate thresholds. The baseline rate is 10000 requests per second without any tweaking!
 
 
+# Deploy using deploy_api_gateway_and_lambda.py
+
+This script uses python subprocess to create API Gateway and Lambda. It could have been done using Terraform or Cloudformation but this was a quick lookup to use AWS CLI. Assumes you have the correct permissions to run the CLI commands. Values are hardcoded currently.
 
 # Testing Using curl_test.py
 
