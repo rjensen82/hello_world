@@ -44,6 +44,8 @@ if __name__ == "__main__":
 	if len(sys.argv)<2:
 		sys.exit("Usage:\nNOTE:<name_for_post> is optional\npython curl_test.py <env> <name_for_post>\n")
 	environment = sys.argv[1]
+	if environment != ("dev" or "test" or "demo" or "prod"):
+		sys.exit("Invalid environment! Select from dev, test, demo or prod")
 	if len(sys.argv)==2:
 		name="I am a name"
 	elif len(sys.argv)==3:
