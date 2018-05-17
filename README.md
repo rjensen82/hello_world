@@ -4,14 +4,14 @@ Welcome to the README.md for my basic 'greetings microservice'. The microservice
 This repo assumes you have an AWS account with proper access/permissions to AWS in order to build the stack using Terraform.
 
 
-#Sample URL for testing GET and POST
+# Sample URL for testing GET and POST
 https://5er9ozc9sc.execute-api.us-west-2.amazonaws.com/prod/helloworld
 NOTE: can change prod to any of dev, test, demo and prod
 
 
 
 
-#Questions and Answers About Project
+# Questions and Answers About Project
 
 Is the service resonably resiliant? 
 YES, it is backed by Lambda to prevent single node failures
@@ -21,7 +21,7 @@ YES, you can scale using API Gateway in various ways. Such as enabling Cache cap
 
 
 
-#Testing Using curl_test.py
+# Testing Using curl_test.py
 
 The test script is run with:
 python curl_test.py <env>
